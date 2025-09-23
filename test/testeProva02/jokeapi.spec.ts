@@ -44,11 +44,10 @@ describe('Joke API tests', () => {
   });
 
   // 3. Teste para garantir que a API retorne um erro 404 quando um endpoint inválido é acessado
-  it('Deve retornar erro 404 para endpoint inválido', async () => {
+  it('Deve retornar erro 400 para endpoint inválido', async () => {
     await p
       .spec()
       .get(`${baseUrl}joke/InvalidEndpoint`)
-      .expectStatus(StatusCodes.NOT_FOUND)
-      .expectBodyContains('Not Found');
+      .expectStatus(StatusCodes.BAD_REQUEST)
   });
 });

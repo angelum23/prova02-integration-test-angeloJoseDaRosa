@@ -43,7 +43,7 @@ describe('Joke API tests', () => {
       });
   });
 
-  // 3. Teste para garantir que a API retorne um erro 404 quando um endpoint inválido é acessado
+  // 3. Teste para garantir que a API retorne um erro 400 quando um endpoint inválido é acessado
   it('Deve retornar erro 400 para endpoint inválido', async () => {
     await p
       .spec()
